@@ -3,7 +3,8 @@ package zero
 
 import (
 	"reflect"
-	"log"
+
+	log "github.com/CerviTalotekniikka/cervi-log"
 )
 
 func isZero(v reflect.Value) bool {
@@ -53,7 +54,7 @@ func isZero(v reflect.Value) bool {
 	case reflect.Struct:
 		for i, n := 0, v.NumField(); i < n; i++ {
 			if !isZero(v.Field(i)) {
-				log.Println("field", i, v.Field(i).Kind(), "is not zero")
+				log.Trace("field", i, v.Field(i).Kind(), "is not zero")
 				return false
 			}
 		}
