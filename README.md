@@ -11,6 +11,7 @@ Check if golang struct is empty
 In your project, install via go modules:
 
 ```
+export GOPRIVATE=github.com/CerviTalotekniikka/*
 go get github.com/CerviTalotekniikka/zero@latest
 ```
 
